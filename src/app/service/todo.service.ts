@@ -6,9 +6,9 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class TodoService {
   todos = [
-    { id: 1, name: 'shopping', isompleted: false },
-    { id: 1, name: 'meeting', isompleted: true },
-    { id: 1, name: 'walking cat', isompleted: false },
+    { id: 1, name: 'shopping', isCompleted: false },
+    { id: 1, name: 'meeting', isCompleted: true },
+    { id: 1, name: 'walking cat', isCompleted: false },
   ];
 
   dataTodos = new BehaviorSubject<any>(this.todos);
