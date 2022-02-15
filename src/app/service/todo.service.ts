@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -10,5 +11,12 @@ export class TodoService {
     { id: 1, name: 'walking cat', isompleted: false },
   ];
 
+  dataTodos = new BehaviorSubject<any>(this.todos);
+  data = this.dataTodos.asObservable();
+
   constructor() {}
+
+  getTodos() {
+    return this.data;
+  }
 }
