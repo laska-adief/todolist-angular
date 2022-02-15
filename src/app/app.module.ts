@@ -6,6 +6,7 @@ import { TodosComponent } from './todos/todos.component';
 import { TodoListComponent } from './todos/todo-list/todo-list.component';
 import { TodoCompleteComponent } from './todos/todo-complete/todo-complete.component';
 import { TodoInputComponent } from './todos/todo-input/todo-input.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { TodoInputComponent } from './todos/todo-input/todo-input.component';
     TodoInputComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
