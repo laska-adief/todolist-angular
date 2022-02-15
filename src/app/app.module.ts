@@ -7,6 +7,7 @@ import { TodoListComponent } from './todos/todo-list/todo-list.component';
 import { TodoCompleteComponent } from './todos/todo-complete/todo-complete.component';
 import { TodoInputComponent } from './todos/todo-input/todo-input.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AngularMaterialModule } from './shared/angular-material/angular-material.module';
 
 @NgModule({
   declarations: [
@@ -14,13 +15,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     TodosComponent,
     TodoListComponent,
     TodoCompleteComponent,
-    TodoInputComponent
+    TodoInputComponent,
   ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule
-  ],
+  imports: [BrowserModule, BrowserAnimationsModule, AngularMaterialModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
