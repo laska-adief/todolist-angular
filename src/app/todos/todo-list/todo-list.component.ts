@@ -6,11 +6,15 @@ import { TodoService } from 'src/app/service/todo.service';
   templateUrl: './todo-list.component.html',
   styleUrls: ['./todo-list.component.css'],
 })
-export class TodoListComponent implements OnInit {
+export class TodoListComponent implements OnInit, AfterContentChecked {
   todolist: any = [];
   constructor(private todoService: TodoService) {}
 
   ngOnInit(): void {
+    this.getTodoList();
+  }
+
+  ngAfterContentChecked(): void {
     this.getTodoList();
   }
 

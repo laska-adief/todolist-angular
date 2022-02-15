@@ -6,11 +6,15 @@ import { TodoService } from 'src/app/service/todo.service';
   templateUrl: './todo-complete.component.html',
   styleUrls: ['./todo-complete.component.css'],
 })
-export class TodoCompleteComponent implements OnInit {
+export class TodoCompleteComponent implements OnInit, AfterContentChecked {
   completeTodos: any = [];
   constructor(private todoService: TodoService) {}
 
   ngOnInit(): void {
+    this.getCompleteTodo();
+  }
+
+  ngAfterContentChecked(): void {
     this.getCompleteTodo();
   }
 
