@@ -8,6 +8,7 @@ import { TodoCompleteComponent } from './todos/todo-complete/todo-complete.compo
 import { TodoInputComponent } from './todos/todo-input/todo-input.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './shared/angular-material/angular-material.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,12 @@ import { AngularMaterialModule } from './shared/angular-material/angular-materia
     TodoCompleteComponent,
     TodoInputComponent,
   ],
-  imports: [BrowserModule, BrowserAnimationsModule, AngularMaterialModule],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    AngularMaterialModule,
+    ReactiveFormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
