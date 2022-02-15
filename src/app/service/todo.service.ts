@@ -19,4 +19,10 @@ export class TodoService {
   getTodos() {
     return this.data;
   }
+
+  addTodo(todo: any) {
+    const dataTodo = this.todos;
+    dataTodo.push(todo);
+    this.dataTodos.next(dataTodo);
+  }
 }
