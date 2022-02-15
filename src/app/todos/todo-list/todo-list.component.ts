@@ -16,7 +16,9 @@ export class TodoListComponent implements OnInit {
 
   getTodoList() {
     this.todoService.getTodos().subscribe((resp) => {
-      const todolistData = resp.filter((todo: any) => todo.isompleted !== true);
+      const todolistData = resp.filter(
+        (todo: any) => todo.isCompleted !== true
+      );
       this.todolist = todolistData;
     });
   }
