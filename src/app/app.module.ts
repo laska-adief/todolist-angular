@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import { TodosComponent } from './todos/todos.component';
 import { TodoListComponent } from './todos/todo-list/todo-list.component';
 import { TodoCompleteComponent } from './todos/todo-complete/todo-complete.component';
+import { TodoInputComponent } from './todos/todo-input/todo-input.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodosComponent,
     TodoListComponent,
-    TodoCompleteComponent
+    TodoCompleteComponent,
+    TodoInputComponent
   ],
   imports: [
     BrowserModule
