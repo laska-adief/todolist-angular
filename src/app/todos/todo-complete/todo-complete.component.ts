@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterContentChecked, Component, OnInit } from '@angular/core';
 import { TodoService } from 'src/app/service/todo.service';
 
 @Component({
@@ -12,7 +12,6 @@ export class TodoCompleteComponent implements OnInit {
 
   ngOnInit(): void {
     this.getCompleteTodo();
-    console.log(this.completeTodos);
   }
 
   getCompleteTodo() {
@@ -22,5 +21,12 @@ export class TodoCompleteComponent implements OnInit {
       );
       this.completeTodos = completeTodoData;
     });
+  }
+
+  unCompleteTodo(id: any) {
+    setTimeout(() => {
+      this.todoService.doneUndoneTodo(id);
+      this.getCompleteTodo();
+    }, 200);
   }
 }

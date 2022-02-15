@@ -1,5 +1,7 @@
 <div class="container-card">
   <mat-card *ngFor="let todo of completeTodos">
-    <mat-checkbox [checked]="true"> {{ todo.name }} </mat-checkbox>
+    <mat-checkbox [checked]="true" (click)="unCompleteTodo(todo.id)">
+      {{ todo.name }}
+    </mat-checkbox>
   </mat-card>
 </div>
