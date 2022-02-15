@@ -5,11 +5,7 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root',
 })
 export class TodoService {
-  todos = [
-    { id: 1, name: 'shopping', isCompleted: false },
-    { id: 1, name: 'meeting', isCompleted: true },
-    { id: 1, name: 'walking cat', isCompleted: false },
-  ];
+  todos: any = [];
 
   dataTodos = new BehaviorSubject<any>(this.todos);
   data = this.dataTodos.asObservable();
@@ -24,5 +20,11 @@ export class TodoService {
     const dataTodo = this.todos;
     dataTodo.push(todo);
     this.dataTodos.next(dataTodo);
+  }
+
+  doneUndoneTodo(id: any) {
+    const dataTodo = this.todos;
+    const findTodo: any = dataTodo.find((todo: any) => todo.id === id);
+    findTodo.isCompleted = !findTodo.isCompleted;
   }
 }
